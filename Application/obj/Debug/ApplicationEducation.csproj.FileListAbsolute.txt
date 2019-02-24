@@ -1,0 +1,12 @@
+C:\【自己学習】\Application\Application\obj\Debug\ApplicationEducation.csprojAssemblyReference.cache
+C:\【自己学習】\Application\Application\obj\Debug\ApplicationEducation.MasterControl.resources
+C:\【自己学習】\Application\Application\obj\Debug\ApplicationEducation.Parent.resources
+C:\【自己学習】\Application\Application\obj\Debug\Application.Properties.Resources.resources
+C:\【自己学習】\Application\Application\obj\Debug\ApplicationEducation.SalesControl.resources
+C:\【自己学習】\Application\Application\obj\Debug\ApplicationEducation.csproj.GenerateResource.cache
+C:\【自己学習】\Application\Application\obj\Debug\ApplicationEducation.csproj.CoreCompileInputs.cache
+C:\【自己学習】\Application\Application\bin\Debug\Application.exe.config
+C:\【自己学習】\Application\Application\bin\Debug\Application.exe
+C:\【自己学習】\Application\Application\bin\Debug\Application.pdb
+C:\【自己学習】\Application\Application\obj\Debug\Application.exe
+C:\【自己学習】\Application\Application\obj\Debug\Application.pdb
