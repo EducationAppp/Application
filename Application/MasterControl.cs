@@ -12,6 +12,8 @@ namespace ApplicationEducation
 {
     public partial class MasterControl : UserControl
     {
+        public event EventHandler<EventArgs> ChangeRequired = delegate { };
+
         public MasterControl()
         {
             InitializeComponent();
@@ -19,16 +21,19 @@ namespace ApplicationEducation
 
         private void ToSaleFormBtn_Click(object sender, EventArgs e)
         {
-            var parent = new Parent();
-            parent.ChangeForm("Mnt");
+            ChangeRequired(this, EventArgs.Empty);
         }
+
 
         private void DisplayBtn_Click(object sender, EventArgs e)
         {
-            //https://devlights.hatenablog.com/entry/20070302/p2
-            this.MntGritView.DataSource = new BindingSource();
+            BindingSource bindingSource = new BindingSource();
+            var itemTable = new DatabaseAcceser().DatabaseConnecter();
+            bindingSource.DataSource = itemTable;
+            MntGritView.DataSource = bindingSource;
 
-            var dbConnect = new DbConect();
+
+
 
             //設定
             //奇数行を青色にする

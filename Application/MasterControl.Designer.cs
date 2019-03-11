@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.ToSaleFormBtn = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -42,7 +43,13 @@
             this.DeleteBtn = new System.Windows.Forms.Button();
             this.RegisterBtn = new System.Windows.Forms.Button();
             this.DisplayBtn = new System.Windows.Forms.Button();
+            this.itemMasterBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.itemCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.itemNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.itemNameKanaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.MntGritView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itemMasterBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -117,7 +124,14 @@
             // 
             // MntGritView
             // 
+            this.MntGritView.AutoGenerateColumns = false;
             this.MntGritView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.MntGritView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.itemCodeDataGridViewTextBoxColumn,
+            this.itemNameDataGridViewTextBoxColumn,
+            this.itemNameKanaDataGridViewTextBoxColumn,
+            this.priceDataGridViewTextBoxColumn});
+            this.MntGritView.DataSource = this.itemMasterBindingSource;
             this.MntGritView.Location = new System.Drawing.Point(30, 118);
             this.MntGritView.Name = "MntGritView";
             this.MntGritView.RowTemplate.Height = 27;
@@ -170,6 +184,34 @@
             this.DisplayBtn.UseVisualStyleBackColor = true;
             this.DisplayBtn.Click += new System.EventHandler(this.DisplayBtn_Click);
             // 
+            // itemMasterBindingSource
+            // 
+            //this.itemMasterBindingSource.DataSource = typeof(ApplicationEducation.ItemMaster);
+            // 
+            // itemCodeDataGridViewTextBoxColumn
+            // 
+            this.itemCodeDataGridViewTextBoxColumn.DataPropertyName = "ItemCode";
+            this.itemCodeDataGridViewTextBoxColumn.HeaderText = "ItemCode";
+            this.itemCodeDataGridViewTextBoxColumn.Name = "itemCodeDataGridViewTextBoxColumn";
+            // 
+            // itemNameDataGridViewTextBoxColumn
+            // 
+            this.itemNameDataGridViewTextBoxColumn.DataPropertyName = "ItemName";
+            this.itemNameDataGridViewTextBoxColumn.HeaderText = "ItemName";
+            this.itemNameDataGridViewTextBoxColumn.Name = "itemNameDataGridViewTextBoxColumn";
+            // 
+            // itemNameKanaDataGridViewTextBoxColumn
+            // 
+            this.itemNameKanaDataGridViewTextBoxColumn.DataPropertyName = "ItemNameKana";
+            this.itemNameKanaDataGridViewTextBoxColumn.HeaderText = "ItemNameKana";
+            this.itemNameKanaDataGridViewTextBoxColumn.Name = "itemNameKanaDataGridViewTextBoxColumn";
+            // 
+            // priceDataGridViewTextBoxColumn
+            // 
+            this.priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
+            this.priceDataGridViewTextBoxColumn.HeaderText = "Price";
+            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
+            // 
             // MasterControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
@@ -191,6 +233,7 @@
             this.Name = "MasterControl";
             this.Size = new System.Drawing.Size(1500, 800);
             ((System.ComponentModel.ISupportInitialize)(this.MntGritView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itemMasterBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -212,5 +255,10 @@
         private System.Windows.Forms.Button DeleteBtn;
         private System.Windows.Forms.Button RegisterBtn;
         private System.Windows.Forms.Button DisplayBtn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn itemCodeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn itemNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn itemNameKanaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource itemMasterBindingSource;
     }
 }

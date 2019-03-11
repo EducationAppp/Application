@@ -12,9 +12,16 @@ namespace ApplicationEducation
 {
     public partial class SalesControl : UserControl
     {
+        public event EventHandler<EventArgs> ChangeRequired = delegate { };
+
         public SalesControl()
         {
             InitializeComponent();
+        }
+        
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ChangeRequired(this, EventArgs.Empty);
         }
     }
 }
